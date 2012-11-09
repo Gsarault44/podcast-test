@@ -138,10 +138,11 @@
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 			<div class="entry-summary">
                 <?php /* Greg, stop commenting this out, biatch */ ?>
-				<?php /* no help Dan i will comment out what wever i want */?>
+                <?php /* no help Dan i will comment out what wever i want */?>
+				<?php /* help Dan i will comment out what wever i want */?>
 				<?php the_excerpt(); ?>
 			</div><!-- .entry-summary -->
-			
+				
 	<?php else : ?>
 			<div class="entry-content">
 				<?php //the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
