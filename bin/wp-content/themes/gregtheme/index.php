@@ -14,7 +14,11 @@
  */
 
 get_header(); ?>
-
+<?php
+$page_id = 2; // substitute page_id of page you want content included from for "2"
+$page = get_post($page_id);
+echo "<p>$page->post_content</p>";
+?>
 		<div id="container" >
 			<div id="content" role="main">
 				
@@ -23,7 +27,6 @@ get_header(); ?>
 			 * If you want to overload this in a child theme then include a file
 			 * called loop-index.php and that will be used instead.
 			 */
-			  
 			 get_template_part( 'loop', 'index' );
 			?>
 			</div><!-- #content -->

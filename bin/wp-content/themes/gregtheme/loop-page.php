@@ -15,8 +15,14 @@
  */
 ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); 
+// check for thumbnail
+$thumb = get_post_meta($post->ID, 'Thumbnail', $single = true);
+// check for thumbnail class
+$thumb_class = get_post_meta($post->ID, 'Thumbnail Class', $single = true);
+// check for thumbnail alt text
+$thumb_alt = get_post_meta($post->ID, 'Thumbnail Alt', $single = true);?>
+	
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php if ( is_front_page() ) { ?>
 						<h2 class="entry-title"><?php the_title(); ?></h2>
@@ -30,9 +36,6 @@
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
-				<div>
-					<h1 id="hi_greg">Hi greg</h1>
-				</div>
 				<?php comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>

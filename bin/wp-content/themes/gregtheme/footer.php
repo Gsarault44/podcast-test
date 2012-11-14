@@ -22,7 +22,7 @@
 	get_sidebar( 'footer' );
 ?>
 			<div class="sponsors"> 
-				<p>This is where we squeeze part for our sponsors</p>
+				<p>This is where we squeeze a part for our sponsors</p>
 				<ul>
 					<li id="sponsor-one"></li>
 					<li id="sponsor-two"></li>
